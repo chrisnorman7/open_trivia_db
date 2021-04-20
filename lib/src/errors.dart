@@ -8,4 +8,8 @@ class ResponseError extends Error {
 
   /// The code that caused this error.
   final ResponseCodes code;
+
+  /// Return a string representation of this object.
+  @override
+  String toString() => code.toString();
 }
