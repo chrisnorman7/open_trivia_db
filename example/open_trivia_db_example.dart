@@ -30,5 +30,5 @@ Future<void> main() async {
     writer.writeln();
     i++;
   }
-  await writer.done;
+  await writer.close();
 }
