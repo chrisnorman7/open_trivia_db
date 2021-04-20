@@ -12,7 +12,11 @@ Future<void> main() async {
       .firstWhere((element) => element.name.toLowerCase().contains('music'));
   await factory.getCategoryQuestionCount(categories.first);
   final unescape = HtmlUnescape();
-  final questions = await factory.getQuestions(amount: 20, category: category);
+  final questions = await factory.getQuestions(
+      amount: 20,
+      category: category,
+      difficulty: QuestionDifficulties.easy,
+      type: QuestionTypes.multiple);
   final f = File('questions.txt');
   final writer = f.openWrite();
   var i = 1;
