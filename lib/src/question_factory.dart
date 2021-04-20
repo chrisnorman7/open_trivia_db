@@ -83,12 +83,12 @@ class QuestionFactory {
     }
     if (difficulty != null) {
       var d = difficulty.toString();
-      d = d.substring(d.lastIndexOf('.'));
+      d = d.substring(d.lastIndexOf('.') + 1);
       url += '&difficulty=$d';
     }
     if (type != null) {
       var t = type.toString();
-      t = t.substring(t.lastIndexOf('.'));
+      t = t.substring(t.lastIndexOf('.') + 1);
       url += '&type=$t';
     }
     final r = await http.get(url);
