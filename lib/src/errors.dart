@@ -1,10 +1,9 @@
-import '../open_trivia_db.dart';
+import 'json/enumerations.dart';
 
-/// Provides error classes.
-
-class ResponseError extends Error {
+/// An HTTP error from the server.
+class ResponseError implements Exception {
   /// Create an error.
-  ResponseError(this.code) : super();
+  ResponseError(this.code);
 
   /// The code that caused this error.
   final ResponseCodes code;

@@ -1,18 +1,18 @@
 name: open_trivia_db
 description: Dart interface to https://opentdb.com/.
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/chrisnorman7/open_trivia_db
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ^3.3.0-174
 
 dependencies:
-  dio: ^4.0.0
+  dio: ^5.4.0
   html_unescape: ^2.0.0
   json_annotation: ^4.0.1
 
 dev_dependencies:
-  build_runner:
-  json_serializable: ^4.1.0
-  pedantic:
-  test:
+  build_runner: ^2.1.11
+  json_serializable: ^6.7.1
+  lints: ^3.0.0
+  test: ^1.18.1
