@@ -5,7 +5,7 @@ import '../question_factory.dart';
 /// Question difficulties.
 ///
 /// Any member of this enum can be passed to [QuestionFactory.getQuestions].
-enum QuestionDifficulties {
+enum QuestionDifficulty {
   /// Easy questions.
   @JsonValue('easy')
   easy,
@@ -22,7 +22,7 @@ enum QuestionDifficulties {
 /// Types of questions.
 ///
 /// Members of this enumeration can be used with [QuestionFactory.getQuestions].
-enum QuestionTypes {
+enum QuestionType {
   /// Multiple Choice.
   @JsonValue('multiple')
   multiple,
@@ -33,7 +33,7 @@ enum QuestionTypes {
 }
 
 /// Enumerates all possible response codes from the API.
-enum ResponseCodes {
+enum QuestionFactoryResponseCode {
   /// Success: Returned results successfully.
   @JsonValue(0)
   success,

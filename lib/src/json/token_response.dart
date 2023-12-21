@@ -19,7 +19,7 @@ class TokenResponse {
       _$TokenResponseFromJson(json);
 
   /// The response code.
-  final ResponseCodes responseCode;
+  final QuestionFactoryResponseCode responseCode;
 
   /// The message returned by the API.
   final String? responseMessage;

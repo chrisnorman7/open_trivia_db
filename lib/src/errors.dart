@@ -6,7 +6,7 @@ class ResponseError implements Exception {
   ResponseError(this.code);
 
   /// The code that caused this error.
-  final ResponseCodes code;
+  final QuestionFactoryResponseCode code;
 
   /// Return a string representation of this object.
   @override

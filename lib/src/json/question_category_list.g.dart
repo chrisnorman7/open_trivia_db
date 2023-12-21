@@ -6,13 +6,16 @@ part of 'question_category_list.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-CategoryList _$CategoryListFromJson(Map<String, dynamic> json) => CategoryList(
+QuestionCategoryList _$QuestionCategoryListFromJson(
+        Map<String, dynamic> json) =>
+    QuestionCategoryList(
       (json['trivia_categories'] as List<dynamic>)
-          .map((e) => Category.fromJson(e as Map<String, dynamic>))
+          .map((e) => QuestionCategory.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$CategoryListToJson(CategoryList instance) =>
+Map<String, dynamic> _$QuestionCategoryListToJson(
+        QuestionCategoryList instance) =>
     <String, dynamic>{
       'trivia_categories': instance.triviaCategories,
     };

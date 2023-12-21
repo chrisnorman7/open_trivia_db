@@ -6,16 +6,16 @@ part of 'question_category_count_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-CategoryQuestionCountResponse _$CategoryQuestionCountResponseFromJson(
+QuestionCategoryCountResponse _$QuestionCategoryCountResponseFromJson(
         Map<String, dynamic> json) =>
-    CategoryQuestionCountResponse(
+    QuestionCategoryCountResponse(
       categoryId: json['category_id'] as int,
-      totals: CategoryQuestionCount.fromJson(
+      totals: QuestionCategoryCount.fromJson(
           json['category_question_count'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$CategoryQuestionCountResponseToJson(
-        CategoryQuestionCountResponse instance) =>
+Map<String, dynamic> _$QuestionCategoryCountResponseToJson(
+        QuestionCategoryCountResponse instance) =>
     <String, dynamic>{
       'category_id': instance.categoryId,
       'category_question_count': instance.totals,

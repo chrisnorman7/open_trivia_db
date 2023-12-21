@@ -7,27 +7,27 @@ part 'question_category_count_response.g.dart';
 
 /// A category question count response from the server.
 @JsonSerializable()
-class CategoryQuestionCountResponse {
+class QuestionCategoryCountResponse {
   /// Create an instance.
-  CategoryQuestionCountResponse({
+  QuestionCategoryCountResponse({
     required this.categoryId,
     required this.totals,
   });
 
   /// Create an instance from a JSON object.
-  factory CategoryQuestionCountResponse.fromJson(
+  factory QuestionCategoryCountResponse.fromJson(
     final Map<String, dynamic> json,
   ) =>
-      _$CategoryQuestionCountResponseFromJson(json);
+      _$QuestionCategoryCountResponseFromJson(json);
 
-  /// The ID of the [Category] this object represents counts for.
+  /// The ID of the [QuestionCategory] this object represents counts for.
   @JsonKey(name: 'category_id')
   final int categoryId;
 
-  /// The totals for this [Category].
+  /// The totals for this [QuestionCategory].
   @JsonKey(name: 'category_question_count')
-  final CategoryQuestionCount totals;
+  final QuestionCategoryCount totals;
 
   /// Convert an instance to JSON.
-  Map<String, dynamic> toJson() => _$CategoryQuestionCountResponseToJson(this);
+  Map<String, dynamic> toJson() => _$QuestionCategoryCountResponseToJson(this);
 }

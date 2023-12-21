@@ -26,10 +26,10 @@ class Question {
   final String categoryName;
 
   /// The type of this question.
-  final QuestionTypes type;
+  final QuestionType type;
 
   /// The difficulty of this question.
-  final QuestionDifficulties difficulty;
+  final QuestionDifficulty difficulty;
 
   /// The text of the question.
   final String question;

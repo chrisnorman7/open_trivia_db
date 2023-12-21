@@ -26,8 +26,8 @@ Future<void> main() async {
   final questions = await factory.getQuestions(
     amount: 20,
     category: category,
-    difficulty: QuestionDifficulties.easy,
-    type: QuestionTypes.multiple,
+    difficulty: QuestionDifficulty.easy,
+    type: QuestionType.multiple,
   );
   _print('Retrieved ${questions.length} questions.');
   final unescape = HtmlUnescape();

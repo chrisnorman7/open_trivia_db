@@ -8,7 +8,8 @@ part of 'questions_response.dart';
 
 QuestionsResponse _$QuestionsResponseFromJson(Map<String, dynamic> json) =>
     QuestionsResponse(
-      responseCode: $enumDecode(_$ResponseCodesEnumMap, json['response_code']),
+      responseCode: $enumDecode(
+          _$QuestionFactoryResponseCodeEnumMap, json['response_code']),
       questions: (json['results'] as List<dynamic>)
           .map((e) => Question.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -16,14 +17,15 @@ QuestionsResponse _$QuestionsResponseFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$QuestionsResponseToJson(QuestionsResponse instance) =>
     <String, dynamic>{
-      'response_code': _$ResponseCodesEnumMap[instance.responseCode]!,
+      'response_code':
+          _$QuestionFactoryResponseCodeEnumMap[instance.responseCode]!,
       'results': instance.questions,
     };
 
-const _$ResponseCodesEnumMap = {
-  ResponseCodes.success: 0,
-  ResponseCodes.noResults: 1,
-  ResponseCodes.invalidParameter: 2,
-  ResponseCodes.tokenNotFound: 3,
-  ResponseCodes.tokenEmptySession: 4,
+const _$QuestionFactoryResponseCodeEnumMap = {
+  QuestionFactoryResponseCode.success: 0,
+  QuestionFactoryResponseCode.noResults: 1,
+  QuestionFactoryResponseCode.invalidParameter: 2,
+  QuestionFactoryResponseCode.tokenNotFound: 3,
+  QuestionFactoryResponseCode.tokenEmptySession: 4,
 };

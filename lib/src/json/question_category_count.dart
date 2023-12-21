@@ -4,9 +4,9 @@ part 'question_category_count.g.dart';
 
 /// The number of questions in a particular category.
 @JsonSerializable()
-class CategoryQuestionCount {
+class QuestionCategoryCount {
   /// Create an instance.
-  const CategoryQuestionCount({
+  const QuestionCategoryCount({
     required this.total,
     required this.easy,
     required this.medium,
@@ -14,8 +14,8 @@ class CategoryQuestionCount {
   });
 
   /// Create an instance from a JSON object.
-  factory CategoryQuestionCount.fromJson(final Map<String, dynamic> json) =>
-      _$CategoryQuestionCountFromJson(json);
+  factory QuestionCategoryCount.fromJson(final Map<String, dynamic> json) =>
+      _$QuestionCategoryCountFromJson(json);
 
   /// The total number of questions in the category.
   @JsonKey(name: 'total_question_count')
@@ -34,5 +34,5 @@ class CategoryQuestionCount {
   final int hard;
 
   /// Convert an instance to JSON.
-  Map<String, dynamic> toJson() => _$CategoryQuestionCountToJson(this);
+  Map<String, dynamic> toJson() => _$QuestionCategoryCountToJson(this);
 }

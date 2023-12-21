@@ -6,17 +6,17 @@ part 'question_category_list.g.dart';
 
 /// A list of categories sent by the server.
 @JsonSerializable(fieldRename: FieldRename.snake)
-class CategoryList {
+class QuestionCategoryList {
   /// Create an instance.
-  CategoryList(this.triviaCategories);
+  QuestionCategoryList(this.triviaCategories);
 
   /// Create an instance from a JSON object.
-  factory CategoryList.fromJson(final Map<String, dynamic> json) =>
-      _$CategoryListFromJson(json);
+  factory QuestionCategoryList.fromJson(final Map<String, dynamic> json) =>
+      _$QuestionCategoryListFromJson(json);
 
   /// The list of supported categories.
-  final List<Category> triviaCategories;
+  final List<QuestionCategory> triviaCategories;
 
   /// Convert an instance to JSON.
-  Map<String, dynamic> toJson() => _$CategoryListToJson(this);
+  Map<String, dynamic> toJson() => _$QuestionCategoryListToJson(this);
 }

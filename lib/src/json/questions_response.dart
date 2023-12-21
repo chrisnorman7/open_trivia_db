@@ -19,7 +19,7 @@ class QuestionsResponse {
       _$QuestionsResponseFromJson(json);
 
   /// The response code.
-  final ResponseCodes responseCode;
+  final QuestionFactoryResponseCode responseCode;
 
   /// A list of questions.
   @JsonKey(name: 'results')

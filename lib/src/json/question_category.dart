@@ -4,16 +4,16 @@ part 'question_category.g.dart';
 
 /// A question category.
 @JsonSerializable()
-class Category {
+class QuestionCategory {
   /// Create a category.
-  const Category({
+  const QuestionCategory({
     required this.id,
     required this.name,
   });
 
   /// Create an instance from a JSON object.
-  factory Category.fromJson(final Map<String, dynamic> json) =>
-      _$CategoryFromJson(json);
+  factory QuestionCategory.fromJson(final Map<String, dynamic> json) =>
+      _$QuestionCategoryFromJson(json);
 
   /// The unique id of the category.
   final int id;
@@ -22,5 +22,5 @@ class Category {
   final String name;
 
   /// Convert an instance to json.
-  Map<String, dynamic> toJson() => _$CategoryToJson(this);
+  Map<String, dynamic> toJson() => _$QuestionCategoryToJson(this);
 }
